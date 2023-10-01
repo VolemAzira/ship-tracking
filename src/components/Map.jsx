@@ -32,13 +32,13 @@ function Map() {
       lat: -6.087271483353298,
       lng: 106.82179412420203,
       title: "Ship 1",
-      destination: "Pelabuhan Tanjung Priok",
+      destination: "Pelabuhan Muara Baru",
     },
     {
       lat: -6.087185549916167,
       lng: 106.85237039150249,
       title: "Ship 2",
-      destination: "Pelabuhan Muara Baru",
+      destination: "Pelabuhan Tanjung Priok",
     },
   ]);
 
@@ -94,7 +94,10 @@ function Map() {
 
   return (
     <main className="pt-[5rem] lg:pt-[6rem]">
-      <div className="h-[500px] mb-5 border-b-2 border-black shadow-lg" id="home">
+      <div
+        className="h-[500px] mb-5 border-b-2 border-black shadow-lg"
+        id="home"
+      >
         <MapContainer center={initialMapCenter} zoom={initialZoom}>
           <TileLayer
             attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
@@ -125,7 +128,10 @@ function Map() {
           ))}
         </MapContainer>
       </div>
-      <form className="flex flex-col justify-center items-center mx-5" id="form">
+      <form
+        className="flex flex-col justify-center items-center mx-5"
+        id="form"
+      >
         <h3 className="text-3xl font-bold">Edit Ships Positions:</h3>
         <div className="flex flex-col md:flex-row gap-10 m-5 border-2 border-black w-full md:w-auto">
           {shipPositions.map((position, index) => (
